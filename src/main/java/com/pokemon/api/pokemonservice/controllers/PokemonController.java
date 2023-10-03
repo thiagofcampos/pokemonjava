@@ -1,6 +1,7 @@
 package com.pokemon.api.pokemonservice.controllers;
 
 import com.pokemon.api.pokemonservice.clients.vos.pokemon.responses.pokemonByNameResponse.PokemonByNameResponseDto;
+import com.pokemon.api.pokemonservice.controllers.dtos.PokemonDto;
 import com.pokemon.api.pokemonservice.services.PokemonService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path="v1/pokemon", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PokemonController {
-    final Integer LIMIT = 5;
+    final Integer LIMIT = 151;
     final Integer OFFSET = 0;
     final PokemonService pokemonService;
 
@@ -21,7 +22,7 @@ public class PokemonController {
     }
 
     @GetMapping
-    public List<PokemonByNameResponseDto> listPokemon(){
+    public List<PokemonDto> listPokemon(){
         return  pokemonService.getPokemon(LIMIT, OFFSET);
     }
 }

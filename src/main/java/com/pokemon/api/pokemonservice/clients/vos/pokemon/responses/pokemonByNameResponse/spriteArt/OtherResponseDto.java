@@ -5,8 +5,5 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-@AllArgsConstructor
 public record OtherResponseDto(@JsonAlias("official-artwork") OficialArtWorkResponse officialArtWork) {
 }

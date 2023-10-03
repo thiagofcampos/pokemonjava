@@ -6,13 +6,8 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Getter
-@Setter
-@AllArgsConstructor
 public record PokemonListResponseDto (
-        int count,
-        String next,
-        String previous,
+        Integer count,
         List<PokemonResponseDto> results
 ){
 }

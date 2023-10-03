@@ -3,9 +3,5 @@ package com.pokemon.api.pokemonservice.clients.vos.pokemon.responses.pokemonByNa
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
-@Getter
-@Setter
-@AllArgsConstructor
 public record OficialArtWorkResponse(String front_default) {
 }

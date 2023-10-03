@@ -8,9 +8,6 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Getter
-@Setter
-@AllArgsConstructor
 public record PokemonByNameResponseDto(String name, SpriteResponse sprites, List<PokemonTypesResponse> types) {
 }
 
